@@ -1,2 +1,3 @@
 phosh.service.d/* /usr/lib/systemd/system/phosh.service.d/
 android-service@hwcomposer.service.d/* /usr/lib/systemd/system/android-service@hwcomposer.service.d/
+phosh-session.hotfix /usr/share/phosh-config-hwcomposer/
