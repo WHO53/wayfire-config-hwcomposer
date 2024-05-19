@@ -1,17 +1,15 @@
 #!/bin/sh
 
-sessionupgrade() {
-	# Buildd is busted due to t64 migration, and gnome-session
-	# now has dropped the --systemd/--builtin option.
-	# This is the only way to avoid a serious bug where new
-	# sessions are unbootable with the new gnome-session.
-	if [ ! -e "/usr/bin/phosh-session.real" ]; then
+sessionupgrade_removal() {
+	# Newer phosh packages don't require the hotfix
+	# anymore.
+	if [ -e "/usr/bin/phosh-session.real" ]; then
+		rm -f "/usr/bin/phosh-session"
 		dpkg-divert \
 			--rename \
 			--package phosh-config-hwcomposer \
 			--divert /usr/bin/phosh-session.real \
-			--add /usr/bin/phosh-session
-		ln -s "/usr/share/phosh-config-hwcomposer/phosh-session.hotfix" "/usr/bin/phosh-session"
+			--rm /usr/bin/phosh-session
 	fi
 }
 
@@ -47,7 +45,7 @@ EOF
 case "$1" in
 	"configure")
 		systemdenable
-		sessionupgrade
+		sessionupgrade_removal
 		configure
 		;;
 	"abort-upgrade"|"abort-deconfigure"|"abort-remove")

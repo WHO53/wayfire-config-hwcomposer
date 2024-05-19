@@ -9,7 +9,7 @@ Vcs-Git: https://github.com/droidian/phosh-config-hwcomposer.git
 
 Package: phosh-config-hwcomposer
 Architecture: all
-Pre-Depends: phosh, libhybris
+Pre-Depends: phosh (>= 0.39.0~), libhybris
 Depends: ${misc:Depends},
          halium-wrappers (>= 10),
 Description: APT configurations for droidian
