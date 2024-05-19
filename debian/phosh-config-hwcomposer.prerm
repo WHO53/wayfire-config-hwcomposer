@@ -7,7 +7,7 @@ sessionupgrade() {
 			--rename \
 			--package phosh-config-hwcomposer \
 			--divert /usr/bin/phosh-session.real \
-			--rm /usr/bin/phosh-session
+			--remove /usr/bin/phosh-session
 	fi
 }
 
