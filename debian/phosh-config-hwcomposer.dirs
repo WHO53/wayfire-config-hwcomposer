@@ -1,3 +1,0 @@
-/usr/lib/systemd/system/phosh.service.d
-/usr/lib/systemd/system/android-service@hwcomposer.service.d
-/usr/share/phosh-config-hwcomposer

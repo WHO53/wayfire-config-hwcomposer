@@ -1,2 +1,2 @@
-phosh.service.d/* /usr/lib/systemd/system/phosh.service.d/
+wayfire.service.d/* /usr/lib/systemd/system/wayfire.service.d/
 android-service@hwcomposer.service.d/* /usr/lib/systemd/system/android-service@hwcomposer.service.d/

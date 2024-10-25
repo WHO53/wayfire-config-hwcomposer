@@ -1,0 +1,3 @@
+/usr/lib/systemd/system/wayfire.service.d
+/usr/lib/systemd/system/android-service@hwcomposer.service.d
+/usr/share/wayfire-config-hwcomposer
